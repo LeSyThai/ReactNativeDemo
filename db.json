@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "admin@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "2",
+      "email": "user@gmail.com",
+      "password": "456123"
+    },
+    {
+      "id": "be49",
+      "fName": "lamo",
+      "lName": "mao",
+      "email": "lmao@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "4c9d",
+      "fName": "Hm",
+      "lName": "🤔",
+      "email": "hmm@gmail.com",
+      "password": "123456"
+    }
+  ]
+}
