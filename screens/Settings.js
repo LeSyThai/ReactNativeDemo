@@ -3,11 +3,21 @@ import {View, Text, StyleSheet,Image, TouchableOpacity, Dimensions, StatusBar, F
 import { LinearGradient } from 'expo-linear-gradient';
 import { Entypo, Fontisto, Ionicons, Octicons, MaterialCommunityIcons, Feather, AntDesign, FontAwesome6} from '@expo/vector-icons';
 import { useNavigation } from "@react-navigation/native";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteAccountAction } from "../store/userAction";
 
 const screen = Dimensions.get('screen');
 
 export default function Settings(){
     const navigation = useNavigation()
+    const dispatch = useDispatch();
+    const user= useSelector((state) => state.user);
+
+    const handleDeleteAccount = () =>{
+        dispatch(deleteAccountAction(user.user?.[0]?.id));
+        navigation.navigate('Login');
+    }
+
     return (
         <View style={styles.container}>
             <LinearGradient 
@@ -38,7 +48,7 @@ export default function Settings(){
                     <TouchableOpacity style={styles.item}>
                         <Text style={{color: 'white'}}>Privacy policy</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={[styles.item, {marginTop: 30}]}>
+                    <TouchableOpacity style={[styles.item, {marginTop: 30}]} onPress={handleDeleteAccount()}>
                         <Text style={{color: 'red'}}>Delete account</Text>
                     </TouchableOpacity>
                 </View>

@@ -36,7 +36,7 @@ export default function Login(){
         if(validateInputs()){
              await dispatch(loginAction(email, password));
             // if(user.isSignedIn)
-                navigation.navigate('Welcome');
+                // navigation.navigate('Welcome');
         }
       };
 
