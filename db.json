@@ -9,6 +9,13 @@
       "id": "2",
       "email": "user@gmail.com",
       "password": "456123"
+    },
+    {
+      "id": "a5b9",
+      "fName": "lmao",
+      "lName": "lemo",
+      "email": "hmm@gmail.com",
+      "password": "123456"
     }
   ]
 }

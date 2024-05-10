@@ -45,6 +45,7 @@ export const signupReducer = (state= initialState, action) =>{
             error: null,
           };
         case SIGNUP_FAIL:
+            console.log('fail');
           return {
             ...state,
             signupSuccess: false,

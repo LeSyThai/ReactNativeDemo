@@ -51,6 +51,7 @@ export const signupAction = (fName, lName, email, password) => async(dispatch) =
       });
     
       if (response.status === 201) {
+        Alert.alert('Sign up successfully')
         // console.log(response)
         dispatch({       
           type: SIGNUP_SUCCESS,
@@ -58,16 +59,20 @@ export const signupAction = (fName, lName, email, password) => async(dispatch) =
         });
       }
       else{
-        console.error('Invalid email or password.')
+        Alert.alert('Invalid email or password.')
         // console.log(response)
         dispatch({
-          type: LOGIN_FAIL,
+          type: SIGNUP_FAIL,
           payload: 'Invalid email or password.'
         })
       }
     }
     else{
-      console.log('Account has aleady exist');
+      Alert.alert('Account has aleady exist');
+      dispatch({
+        type: SIGNUP_FAIL,
+        payload: 'Account has aleady exist.'
+      })
     }
 
     
