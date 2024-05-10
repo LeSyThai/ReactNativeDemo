@@ -43,10 +43,10 @@ export default function Signup(){
             if(!isChecked){
                 Alert.alert('Please check the Term & Conditions and Privacy Policy')
             }else 
-                console.log('1');
                 dispatch(signupAction(fName, lName, email, password));
             // if(user.isSignedIn)
             //     navigation.navigate('Welcome');
+            console.log(user)
         }
     }
 
